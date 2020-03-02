@@ -5,10 +5,9 @@ module.exports = async (params) => new Promise(
 	const connection = mysql.createConnection(params);
   connection.connect(error => {
 	  if (error) {
-      reject(error);
+      reject(new Error('Connection failed!'));
       return;
     }
-    console.log('MySQl Connected.')
     resolve(connection);
   })
 });

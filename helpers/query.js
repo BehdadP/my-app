@@ -1,11 +1,12 @@
 module.exports = async (conn, q, params) => new Promise(
-(resolve, reject) => {
-  const handler = (error, result) => {
-	  if (error) {
-      reject(error);
-      return;
+  (resolve, reject) => {
+    const handler = (error, result) => {
+      if (error) {
+        reject(new Error('Query executation failed!'));
+        return;
+      }
+      resolve(result);
     }
-    resolve(result);
-  }
-  conn.query(q, params, handler);
-}).catch(console.log);
+    conn.query(q, params, handler);
+  });
+  
