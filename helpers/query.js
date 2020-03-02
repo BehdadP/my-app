@@ -9,4 +9,3 @@ module.exports = async (conn, q, params) => new Promise(
     }
     conn.query(q, params, handler);
   });
-  

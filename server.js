@@ -7,10 +7,10 @@ const timeout = require('express-timeout-handler');
 const app = express();
 const port = 3000;
 
-const apiTimeout = 30* 1000; // 30 seconds timeout to get data from API
+const apiTimeout = 30 * 1000; // 30 seconds timeout to get data from API
 var options = {
   timeout: apiTimeout,
-  onTimeout: function(req, res) {
+  onTimeout: function (req, res) {
     res.status(503).send('Service unavailable. Please retry.');
   },
   disable: ['write', 'setHeaders', 'send', 'json', 'end']
