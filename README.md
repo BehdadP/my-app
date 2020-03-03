@@ -1,4 +1,4 @@
-my-app is a testing purpose app which works with AWS apis to test Amazon relational database and provide some APIs to retrieve data this app can be tested by Postman with following samples:
+my-app is a testing purpose app which works with AWS APIs to test Amazon relational database and provide some APIs to retrieve data this app can be tested by Postman with following samples:
 
                           http://localhost:3000/rank/?order=desc&aq_date=2020-02-01
                           
